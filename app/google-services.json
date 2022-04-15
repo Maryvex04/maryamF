@@ -1,45 +1,34 @@
 {
   "project_info": {
-    "project_number": "179313809301",
-    "firebase_url": "https://samihtaskmng2017.firebaseio.com",
-    "project_id": "samihtaskmng2017",
-    "storage_bucket": "samihtaskmng2017.appspot.com"
+    "project_number": "1026436656972",
+    "firebase_url": "https://maryamtaskmanager-default-rtdb.firebaseio.com",
+    "project_id": "maryamtaskmanager",
+    "storage_bucket": "maryamtaskmanager.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:179313809301:android:0bf5060869c30f3cd6889c",
+        "mobilesdk_app_id": "1:1026436656972:android:2701a0763656613d25a9e9",
         "android_client_info": {
-          "package_name": "com.example.samihtaskmngr2019"
+          "package_name": "maryamtask.manager"
         }
       },
       "oauth_client": [
         {
-          "client_id": "179313809301-bh0gs7oo24qe4h0q3hitlf19r3ns9mmk.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.example.samihtaskmngr2019",
-            "certificate_hash": "8d4e87598d212bdb282d05faa7766dc9c486dbdf"
-          }
-        },
-        {
-          "client_id": "179313809301-v5tul14j34l6d8nopblgm9bjc4o32bl5.apps.googleusercontent.com",
+          "client_id": "1026436656972-bjnaq2kk79i11ac44jdjgc6743jfj6ev.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBnuv1M_vliCjrquFjBooQAOT9r8wkSXC0"
-        },
-        {
-          "current_key": "AIzaSyAColJRnLC1Zf6n54SlICG_A21JVtMT7o8"
+          "current_key": "AIzaSyDI8jdosuZ0sBX_TGFeoCFWZT8g8P2SL9o"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "179313809301-v5tul14j34l6d8nopblgm9bjc4o32bl5.apps.googleusercontent.com",
+              "client_id": "1026436656972-bjnaq2kk79i11ac44jdjgc6743jfj6ev.apps.googleusercontent.com",
               "client_type": 3
             }
           ]
@@ -48,70 +37,27 @@
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:179313809301:android:b22da3e54756e6e7",
-        "android_client_info": {
-          "package_name": "com.samih.abs.samihtaskmng2017"
-        }
-      },
-      "oauth_client": [
-        {
-          "client_id": "179313809301-7fqa03dkdo0ivuerfbdttogtda46u6te.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.samih.abs.samihtaskmng2017",
-            "certificate_hash": "34725dd8089530cf910411a9da76332d8b0385f8"
-          }
-        },
-        {
-          "client_id": "179313809301-v5tul14j34l6d8nopblgm9bjc4o32bl5.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBnuv1M_vliCjrquFjBooQAOT9r8wkSXC0"
-        },
-        {
-          "current_key": "AIzaSyAColJRnLC1Zf6n54SlICG_A21JVtMT7o8"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "179313809301-v5tul14j34l6d8nopblgm9bjc4o32bl5.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:179313809301:android:e105d4b592560cccd6889c",
+        "mobilesdk_app_id": "1:1026436656972:android:37ef7c9f964bad8125a9e9",
         "android_client_info": {
           "package_name": "neveen.samih.samihtasksmanager"
         }
       },
       "oauth_client": [
         {
-          "client_id": "179313809301-v5tul14j34l6d8nopblgm9bjc4o32bl5.apps.googleusercontent.com",
+          "client_id": "1026436656972-bjnaq2kk79i11ac44jdjgc6743jfj6ev.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyBnuv1M_vliCjrquFjBooQAOT9r8wkSXC0"
-        },
-        {
-          "current_key": "AIzaSyAColJRnLC1Zf6n54SlICG_A21JVtMT7o8"
+          "current_key": "AIzaSyDI8jdosuZ0sBX_TGFeoCFWZT8g8P2SL9o"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "179313809301-v5tul14j34l6d8nopblgm9bjc4o32bl5.apps.googleusercontent.com",
+              "client_id": "1026436656972-bjnaq2kk79i11ac44jdjgc6743jfj6ev.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

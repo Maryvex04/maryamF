@@ -8,72 +8,68 @@
 
     <TextView
         android:id="@+id/txtLang"
-        android:layout_width="111dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="6dp"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="40dp"
         android:text="Language"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtAge"
-        app:layout_constraintEnd_toStartOf="@+id/spnrLang"
-        app:layout_constraintHorizontal_bias="0.478"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtCat" />
 
     <Button
         android:id="@+id/btnSave"
-        android:layout_width="97dp"
-        android:layout_height="57dp"
-        android:text="Save"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="5dp"
+        android:text="save"
+        app:layout_constraintEnd_toEndOf="@+id/rb4"
+        app:layout_constraintStart_toStartOf="@+id/rb4"
         app:layout_constraintTop_toBottomOf="@+id/rb4" />
 
     <TextView
         android:id="@+id/txtCat"
-        android:layout_width="113dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="31dp"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="20dp"
         android:text="Category"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/txtLang"
-        app:layout_constraintEnd_toStartOf="@+id/spnrCat"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spnrCat"
-        android:layout_width="280dp"
-        android:layout_height="0dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginBottom="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/spnrLang"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toEndOf="@+id/txtCat"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <Spinner
         android:id="@+id/spnrLang"
-        android:layout_width="277dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="8dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtAge"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toEndOf="@+id/txtLang"
         app:layout_constraintTop_toBottomOf="@+id/spnrCat"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtAge"
+        android:id="@+id/textInputLayout6"
         android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginBottom="555dp"
-        android:hint="Age Restriction"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="1dp"
+        android:hint="By (Author):"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/txtLang">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtAuthor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textSize="18sp"
@@ -81,16 +77,20 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/txtBook"
-        android:layout_width="412dp"
-        android:layout_height="154dp"
+        android:id="@+id/textInputLayout8"
+        android:layout_width="0dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="1dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAge">
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
 
         <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txtBook"
             android:layout_width="match_parent"
-            android:layout_height="83dp"
+            android:layout_height="match_parent"
             android:hint="The book`s content:"
             android:textSize="18sp" />
     </com.google.android.material.textfield.TextInputLayout>
@@ -98,12 +98,11 @@
     <RatingBar
         android:id="@+id/rb4"
         android:layout_width="242dp"
-        android:layout_height="59dp"
-        android:layout_marginTop="24dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="30dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtBook"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"
         tools:ignore="SpeakableTextPresentCheck" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

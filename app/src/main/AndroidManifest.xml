@@ -12,9 +12,7 @@
         <activity
             android:name=".Main2Activity"
             android:exported="true" />
-        <activity
-            android:name=".SettingsActivity"
-            android:exported="true" />
+
         <activity
             android:name=".HistoryActivity"
             android:exported="true" />
@@ -30,9 +28,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".RegisterActivity"
-            android:exported="true" />
+
         <activity
             android:name=".SignInActivity"
             android:exported="true" />

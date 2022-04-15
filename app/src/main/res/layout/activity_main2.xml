@@ -8,41 +8,43 @@
 
     <SearchView
         android:id="@+id/svv"
-        android:layout_width="407dp"
-        android:layout_height="59dp"
+        android:layout_width="425dp"
+        android:layout_height="60dp"
         android:iconifiedByDefault="false"
         android:queryHint="Search for books or auther"
-        tools:layout_editor_absoluteX="2dp" />
+        app:layout_constraintBottom_toTopOf="@+id/lv4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/btnlst"
-        android:layout_width="128dp"
+        android:layout_width="0dp"
         android:layout_height="65dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginTop="562dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginStart="29dp"
+        android:layout_marginEnd="91dp"
         android:text="Book List"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnother"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/svv" />
+        app:layout_constraintTop_toBottomOf="@+id/lv4" />
 
     <Button
         android:id="@+id/btnother"
-        android:layout_width="133dp"
+        android:layout_width="0dp"
         android:layout_height="63dp"
-        android:layout_marginTop="562dp"
-        android:layout_marginEnd="30dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginEnd="29dp"
         android:text="Other"
-        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/svv" />
+        app:layout_constraintStart_toEndOf="@+id/btnlst"
+        app:layout_constraintTop_toBottomOf="@+id/lv4" />
 
     <ListView
         android:id="@+id/lv4"
-        android:layout_width="409dp"
-        android:layout_height="558dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="60dp" />
+        android:layout_width="405dp"
+        android:layout_height="473dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnlst"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

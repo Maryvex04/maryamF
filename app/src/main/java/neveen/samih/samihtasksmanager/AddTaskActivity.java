@@ -7,9 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.RatingBar;
-import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -26,14 +24,17 @@ import MyData.MyTask;
 
 public class AddTaskActivity extends AppCompatActivity {
 
-    private TextInputEditText txtAge,txtBook;
+    private TextInputEditText txtAuthor,txtBook;
     private Button btnSave;
     private RatingBar rb4;
     private Spinner spnrCat,spnrLang;
     private TextView txtLang,txtCat;
     String[] cats = { "Romance", "Horror",
-            "Fiction" };
-
+            "Fantasy","Adventure", "Drama","Poetry", "Short Story"
+    };
+    String[] Langs = { "English", "Arabic",
+            "Hebrew"
+    };
 
 
 
@@ -48,7 +49,7 @@ public class AddTaskActivity extends AppCompatActivity {
         rb4=findViewById(R.id.rb4);
         spnrCat=findViewById(R.id.spnrCat);
         spnrLang=findViewById(R.id.spnrLang);
-        txtAge=findViewById(R.id.txtAge);
+        txtAuthor=findViewById(R.id.txtAuthor);
         txtCat=findViewById(R.id.txtCat);
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,8 +63,25 @@ public class AddTaskActivity extends AppCompatActivity {
                 android.R.layout.simple_spinner_item,
                 cats);
         spnrCat.setAdapter(adCats);
+        adCats.setDropDownViewResource(
+                android.R.layout
+                        .simple_spinner_dropdown_item);
+        spnrCat.setAdapter(adCats);
 
+        ArrayAdapter adLangs
+                = new ArrayAdapter(
+                this,
+                android.R.layout.simple_spinner_item,
+                Langs);
+        spnrLang.setAdapter(adCats);
+        adLangs.setDropDownViewResource(
+                android.R.layout
+                        .simple_spinner_dropdown_item);
+        spnrLang.setAdapter(adLangs);
     }
+
+
+
 
     private void validate() {
         String Title=txtBook.getText().toString();

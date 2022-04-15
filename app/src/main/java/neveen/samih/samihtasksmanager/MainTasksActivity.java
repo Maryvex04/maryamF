@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.SearchView;
 import android.widget.Toast;
@@ -32,12 +33,14 @@ public class MainTasksActivity extends AppCompatActivity implements DialogInterf
     private SearchView svSearchTask;
     private ListView lstvAllTasks;
     private MyTaskAdapter taskAdapter;
+    private Button Bookl;
 
 ///lkjhhkhjk
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Bookl = findViewById(R.id.Bookl);
         //read2
         lstvAllTasks = findViewById(R.id.lstvAllTasks);
         taskAdapter = new MyTaskAdapter(this, R.layout.task_item_layout);
@@ -109,8 +112,8 @@ public class MainTasksActivity extends AppCompatActivity implements DialogInterf
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         if(item.getItemId()==R.id.mnitmSettings)
         {
-            Intent i=new Intent(getApplicationContext(),SettingsActivity.class);
-            startActivity(i);
+//            Intent i=new Intent(getApplicationContext(),SettingsActivity.class);
+//            startActivity(i);
         }
         if(item.getItemId()==R.id.mnitemHistory)
         {
