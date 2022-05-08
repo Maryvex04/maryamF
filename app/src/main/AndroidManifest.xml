@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="neveen.samih.samihtasksmanager">
+    package="neveen.samih.maryamBooks">
 
     <application
         android:allowBackup="true"
@@ -10,17 +10,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SamihTasksManager">
         <activity
-            android:name=".Main2Activity"
-            android:exported="true" />
-
-        <activity
-            android:name=".HistoryActivity"
+            android:name="neveen.samih.maryamBooks.RegisterActivity"
             android:exported="true" />
         <activity
-            android:name=".AddTaskActivity"
+            android:name="neveen.samih.maryamBooks.Main2Activity"
             android:exported="true" />
         <activity
-            android:name=".SpalshScreenActivity"
+            android:name="neveen.samih.maryamBooks.HistoryActivity"
+            android:exported="true" />
+        <activity
+            android:name="neveen.samih.maryamBooks.AddTaskActivity"
+            android:exported="true" />
+        <activity
+            android:name="neveen.samih.maryamBooks.SpalshScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,13 +30,12 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
         <activity
-            android:name=".SignInActivity"
+            android:name="neveen.samih.maryamBooks.SignInActivity"
             android:exported="true" />
         <activity
-            android:name=".MainTasksActivity"
-            android:exported="true"></activity>
+            android:name="neveen.samih.maryamBooks.MainTasksActivity"
+            android:exported="true" />
     </application>
 
 </manifest>

@@ -4,29 +4,33 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HistoryActivity">
+    tools:context=".AddTaskActivity">
 
-    <SearchView
-        android:id="@+id/srvSearchHistory"
-        android:layout_width="407dp"
-        android:layout_height="76dp"
-        android:layout_marginTop="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toTopOf="@+id/lstvHistory"
+    <TextView
+        android:id="@+id/txtLang"
+        android:layout_width="208dp"
+        android:layout_height="53dp"
+        android:text="Language"
+        android:textSize="18sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtCat" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="113dp"
+        android:layout_height="79dp"
+        android:text="save"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        />
 
-    <ListView
-        android:id="@+id/lstvHistory"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/txtCat"
+        android:layout_width="199dp"
         android:layout_height="0dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginBottom="1dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/srvSearchHistory" />
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="112dp"
+        android:text="Category"
+        android:textSize="18sp"
+       />
 </androidx.constraintlayout.widget.ConstraintLayout>

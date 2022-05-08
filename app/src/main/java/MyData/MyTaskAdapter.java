@@ -1,7 +1,6 @@
 package MyData;
 
 import android.content.Context;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
-import neveen.samih.samihtasksmanager.R;
+import neveen.samih.maryamBooks.R;
 
 public class MyTaskAdapter extends ArrayAdapter<MyTask> {//هو وسيط بين مصدر المعطيات وعوضها على الشاشه وهي عباره عن فئه وارثه لفئه من نوع adapter
     public MyTaskAdapter(@NonNull Context context, int resource) {
