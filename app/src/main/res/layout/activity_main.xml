@@ -13,6 +13,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="219dp"
         android:text="Book list"
+        app:backgroundTint="#F36293"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/floatingActionButton"
         app:layout_constraintStart_toStartOf="parent"
@@ -26,6 +27,7 @@
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:clickable="true"
+        app:backgroundTint="#F36293"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/Bookl"
@@ -34,6 +36,7 @@
 
     <SearchView
         android:id="@+id/svSearchTask"
+        style="@android:style/Widget.Material.Light.SearchView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="1dp"

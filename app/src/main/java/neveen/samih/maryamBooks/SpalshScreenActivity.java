@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.widget.ImageView;
 
+import com.google.firebase.FirebaseApp;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class SpalshScreenActivity extends AppCompatActivity {
@@ -30,6 +31,7 @@ public class SpalshScreenActivity extends AppCompatActivity {
                     sleep(ms);
                     finish();
                     //فحص هل تم الدخول مسبقا
+                    FirebaseApp.initializeApp(getApplicationContext());
                     FirebaseAuth auth=FirebaseAuth.getInstance();
                     if (auth.getCurrentUser()!=null)
                         startActivity(new Intent(getApplicationContext(),MainTasksActivity.class));

@@ -1,13 +1,13 @@
 plugins {
     id 'com.android.application'
-//    id 'com.google.gms.google-services'
+    id 'com.google.gms.google-services'
 }
 
 android {
     compileSdk 30
 
     defaultConfig {
-        applicationId "neveen.samih.samihtasksmanager"
+        applicationId "neveen.samih.maryamBooks"
         minSdk 26
         targetSdk 30
         versionCode 1

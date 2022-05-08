@@ -12,6 +12,8 @@
         android:id="@+id/textInputLayout4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:textColorHint="#F36293"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -28,6 +30,8 @@
         android:id="@+id/textInputLayout3"
         android:layout_width="0dp"
         android:layout_height="54dp"
+        android:layout_marginTop="32dp"
+        android:textColorHint="#F36293"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout7">
@@ -44,6 +48,8 @@
         android:id="@+id/textInputLayout5"
         android:layout_width="0dp"
         android:layout_height="53dp"
+        android:layout_marginTop="32dp"
+        android:textColorHint="#F36293"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout3">
@@ -60,6 +66,8 @@
         android:id="@+id/textInputLayout7"
         android:layout_width="0dp"
         android:layout_height="53dp"
+        android:layout_marginTop="32dp"
+        android:textColorHint="#F36293"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout4">
@@ -75,9 +83,10 @@
         android:id="@+id/btnRegisterActivity"
         android:layout_width="86dp"
         android:layout_height="53dp"
-        android:background="#F3739E"
+        android:layout_marginTop="8dp"
         android:text="Save"
-        app:iconTint="#E2F12B6E"
+        app:backgroundTint="#F36293"
+        app:iconTint="#F36293"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout5"
