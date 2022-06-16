@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="neveen.samih.maryamBooks">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -10,19 +13,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SamihTasksManager">
         <activity
-            android:name="neveen.samih.maryamBooks.RegisterActivity"
+            android:name=".SettingsActivity"
             android:exported="true" />
         <activity
-            android:name="neveen.samih.maryamBooks.Main2Activity"
+            android:name=".RegisterActivity"
             android:exported="true" />
         <activity
-            android:name="neveen.samih.maryamBooks.HistoryActivity"
+            android:name=".AddBookActivity"
             android:exported="true" />
         <activity
-            android:name="neveen.samih.maryamBooks.AddTaskActivity"
-            android:exported="true" />
-        <activity
-            android:name="neveen.samih.maryamBooks.SpalshScreenActivity"
+            android:name=".SpalshScreenActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,10 +31,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="neveen.samih.maryamBooks.SignInActivity"
+            android:name=".SignInActivity"
             android:exported="true" />
         <activity
-            android:name="neveen.samih.maryamBooks.MainTasksActivity"
+            android:name=".MyBooksActivity"
             android:exported="true" />
     </application>
 

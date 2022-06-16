@@ -1,99 +1,93 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"-->
+<!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+<!--    xmlns:tools="http://schemas.android.com/tools"-->
+<!--    android:layout_width="match_parent"-->
+<!--    android:layout_height="match_parent"-->
+<!--    tools:context=".SignInActivity">-->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddTaskActivity">
+    app:layoutDescription="@xml/activity_add_task_scene"
+    android:orientation="vertical"
+    tools:context=".AddBookActivity">
 
     <TextView
         android:id="@+id/txtLang"
-        android:layout_width="100dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="40dp"
-        android:text="Language"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="   Language"
         android:textSize="18sp"
         app:drawableTint="#F36293"
         app:fontFamily="casual"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout6"
+        app:layout_constraintEnd_toStartOf="@+id/spnrLang"
         app:layout_constraintTop_toBottomOf="@+id/txtCat" />
-
-    <Button
-        android:id="@+id/btnSave"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:layout_marginTop="5dp"
-        android:text="save"
-        app:backgroundTint="#F36293"
-        app:layout_constraintEnd_toEndOf="@+id/rb4"
-        app:layout_constraintStart_toStartOf="@+id/rb4"
-        app:layout_constraintTop_toBottomOf="@+id/rb4" />
-
-    <TextView
-        android:id="@+id/txtCat"
-        android:layout_width="100dp"
-        android:layout_height="35dp"
-        android:layout_marginTop="20dp"
-        android:text="Category"
-        android:textSize="18sp"
-        app:drawableTint="#F36293"
-        app:fontFamily="casual"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
         android:id="@+id/spnrCat"
-        android:layout_width="200dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/spnrLang"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtCat"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
+    <TextView
+        android:id="@+id/txtCat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="     Genre"
+        android:textSize="18sp"
+        app:drawableTint="#F36293"
+        app:fontFamily="casual"
+        app:layout_constraintBottom_toTopOf="@+id/txtLang"
+        app:layout_constraintEnd_toStartOf="@+id/spnrCat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <Spinner
         android:id="@+id/spnrLang"
-        android:layout_width="200dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="50dp"
-        android:layout_marginTop="40dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/textInputLayout6"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/txtLang"
         app:layout_constraintTop_toBottomOf="@+id/spnrCat"
         tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout6"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:hint="By (Author):"
         android:textColorHint="#F36293"
         app:hintAnimationEnabled="false"
         app:hintTextAppearance="@style/TextAppearance.AppCompat.Body1"
         app:hintTextColor="#F36293"
+        app:layout_constraintBottom_toTopOf="@+id/btnUpload"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLang">
+        app:layout_constraintTop_toBottomOf="@+id/spnrLang">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/txtAuthor"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textSize="18sp"
+            android:textSize="12sp"
             tools:ignore="TouchTargetSizeCheck" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/textInputLayout8"
-        android:layout_width="0dp"
-        android:layout_height="110dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
         android:textColorHint="#F36293"
         app:hintTextColor="#F36293"
+        app:layout_constraintBottom_toTopOf="@+id/imgBtn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textInputLayout6">
@@ -103,18 +97,51 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:hint="The book`s content:"
-            android:textSize="18sp" />
+            android:textSize="12sp" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <ImageButton
+        android:id="@+id/imgBtn"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"
+        tools:ignore="SpeakableTextPresentCheck"
+        tools:srcCompat="@tools:sample/avatars" />
 
     <RatingBar
         android:id="@+id/rb4"
         style="@android:style/Widget.RatingBar"
-        android:layout_width="284dp"
-        android:layout_height="62dp"
-        android:layout_marginTop="30dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textInputLayout8"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpload"
         tools:ignore="SpeakableTextPresentCheck" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <Button
+        android:id="@+id/btnUpload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload"
+        app:backgroundTint="#F36293"
+        app:layout_constraintBottom_toTopOf="@+id/btnSave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textInputLayout6" />
+
+    <Button
+        android:id="@+id/btnSave"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        app:backgroundTint="#F36293"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnUpload" />
+</LinearLayout>
+<!--</ScrollView>-->

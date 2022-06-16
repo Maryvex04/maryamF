@@ -3,59 +3,44 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="wrap_content">
 
     <TextView
-        android:id="@+id/itemtasktitle"
+        android:id="@+id/BookName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="62dp"
-        android:layout_marginEnd="41dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="The Book`s Name"
+        android:textColorHint="#F36293"
+        app:layout_constraintStart_toEndOf="@+id/iv1"
+        app:layout_constraintTop_toTopOf="@+id/iv1" />
 
     <TextView
-        android:id="@+id/itemtasksubject"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="26dp"
-        android:text="TextView"
-        app:layout_constraintEnd_toEndOf="@+id/itemtasktitle"
-        app:layout_constraintStart_toStartOf="@+id/itemtasktitle"
-        app:layout_constraintTop_toBottomOf="@+id/itemtasktitle" />
+        android:id="@+id/Authortv"
+        android:layout_width="146dp"
+        android:layout_height="27dp"
+        android:layout_marginTop="1dp"
+        android:text="By(the auther`s name)"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BookName" />
 
     <RatingBar
         android:id="@+id/ratingBar"
         style="@android:style/Widget.RatingBar"
-        android:layout_width="235dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="24dp"
-        android:layout_marginBottom="300dp"
+        android:layout_width="283dp"
+        android:layout_height="56dp"
         android:contentDescription="necessity"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/ib1"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageButton
-        android:id="@+id/ib1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
-        android:layout_marginEnd="61dp"
-        android:contentDescription="call"
-        app:layout_constraintEnd_toStartOf="@+id/ib2"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar"
-        app:srcCompat="@android:drawable/ic_menu_call" />
 
     <ImageButton
         android:id="@+id/ib2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginEnd="97dp"
         android:contentDescription="edit text"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ratingBar"
         app:srcCompat="@android:drawable/ic_menu_edit" />
 
@@ -63,21 +48,17 @@
         android:id="@+id/ib3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
-        android:layout_marginEnd="60dp"
         android:contentDescription="delete"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/ib2"
-        app:layout_constraintTop_toBottomOf="@+id/ratingBar"
+        app:layout_constraintTop_toTopOf="@+id/ib2"
         app:srcCompat="@android:drawable/ic_menu_delete" />
 
     <ImageView
         android:id="@+id/iv1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="133dp"
+        android:layout_height="148dp"
+        app:layout_constraintEnd_toStartOf="@+id/Authortv"
         app:layout_constraintTop_toTopOf="parent"
-        tools:srcCompat="@tools:sample/avatars" />
+        app:srcCompat="@drawable/moooniee_foreground"
+        tools:srcCompat="@drawable/moooniee_foreground" />
 </androidx.constraintlayout.widget.ConstraintLayout>

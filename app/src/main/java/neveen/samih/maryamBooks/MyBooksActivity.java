@@ -23,11 +23,11 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
-import MyData.MyTask;
+import MyData.MyBook;
 import MyData.MyTaskAdapter;
 
 // listener 1.
-public class MainTasksActivity extends AppCompatActivity implements DialogInterface.OnClickListener {
+public class MyBooksActivity extends AppCompatActivity implements DialogInterface.OnClickListener {
     private FloatingActionButton floatingActionButton;
     //read1
     private SearchView svSearchTask;
@@ -50,8 +50,8 @@ public class MainTasksActivity extends AppCompatActivity implements DialogInterf
         floatingActionButton = findViewById(R.id.floatingActionButton);
         floatingActionButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), AddTaskActivity.class));
+            public void onClick(View view) { //كل נbutton الو امر معين بتعمل رد فعل
+                startActivity(new Intent(getApplicationContext(), AddBookActivity.class));
             }
         });
     //read4
@@ -61,7 +61,7 @@ public class MainTasksActivity extends AppCompatActivity implements DialogInterf
 
 
         svSearchTask=findViewById(R.id.svSearchTask); }
-        protected void onResume(){
+        protected void onResume(){//بتكمل الداله
         super.onResume();
 
         readDataFromFireBase("");
@@ -79,13 +79,13 @@ public class MainTasksActivity extends AppCompatActivity implements DialogInterf
         String uid=FirebaseAuth.getInstance().getUid();//current user id
 
         // اضافة امكانية "التحتلن"بكل تغيير سيحصل على القيم في قاعدة البيانات
-        ref.child("mytasks").child(uid).addValueEventListener(new ValueEventListener() {
+        ref.child("MyBooks").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 taskAdapter.clear();
                 for (DataSnapshot d:dataSnapshot.getChildren()
                      ) {
-                    MyTask t=d.getValue(MyTask.class);
+                    MyBook t=d.getValue(MyBook.class);
                     taskAdapter.add(t);
                 }
 
@@ -106,20 +106,10 @@ public class MainTasksActivity extends AppCompatActivity implements DialogInterf
                                  //the xml menu file
         getMenuInflater().inflate(R.menu.main_menu,menu);
         return true;
-    }
+    }//بتعمل المنيو
     //3. select item event handler
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        if(item.getItemId()==R.id.mnitmSettings)
-        {
-//            Intent i=new Intent(getApplicationContext(),SettingsActivity.class);
-//            startActivity(i);
-        }
-        if(item.getItemId()==R.id.mnitemHistory)
-        {
-            Intent i=new Intent(getApplicationContext(),HistoryActivity.class);
-            startActivity(i);
-        }
         if(item.getItemId()==R.id.mnitmSignOut)
         {
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
@@ -133,7 +123,7 @@ public class MainTasksActivity extends AppCompatActivity implements DialogInterf
 
         }
         return true;
-    }
+    }//تودي للصفحات (الخيارات اللي بالمنيو)
 
     //listener 2. implemnet method
 

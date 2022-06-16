@@ -34,7 +34,7 @@ public class SpalshScreenActivity extends AppCompatActivity {
                     FirebaseApp.initializeApp(getApplicationContext());
                     FirebaseAuth auth=FirebaseAuth.getInstance();
                     if (auth.getCurrentUser()!=null)
-                        startActivity(new Intent(getApplicationContext(),MainTasksActivity.class));
+                        startActivity(new Intent(getApplicationContext(), MyBooksActivity.class));
                     else
                     startActivity(new Intent(getApplicationContext(),SignInActivity.class));
                 }

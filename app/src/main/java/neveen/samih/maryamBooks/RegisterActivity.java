@@ -78,7 +78,7 @@ public class RegisterActivity extends AppCompatActivity {
                 if (task.isSuccessful()==true)
                 {
                     finish();
-                    startActivity(new Intent(getApplicationContext(),MainTasksActivity.class));
+                    startActivity(new Intent(getApplicationContext(), MyBooksActivity.class));
                 }
                 else {
                     //dialog

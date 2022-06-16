@@ -2,7 +2,7 @@ package MyData;
 
 import com.google.android.material.textfield.TextInputEditText;
 
-public class MyTask {
+public class MyBook {
     private String key;
     private String title;
     private String subject;
@@ -10,7 +10,7 @@ public class MyTask {
     private int important;
     private String image;
 
-    public MyTask() {
+    public MyBook() {
 
     }
 
