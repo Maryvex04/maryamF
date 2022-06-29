@@ -17,6 +17,8 @@ public class SpalshScreenActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        //Here is the code segment that plays in conjunction with the other code segments, it checks if it's already logged in.
+        //This Method makes the SplashScreen display for 3 seconds.
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_spalsh_screen);
         //Thread: 1

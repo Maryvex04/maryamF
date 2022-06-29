@@ -28,7 +28,7 @@ import MyData.MyTaskAdapter;
 
 // listener 1.
 public class MyBooksActivity extends AppCompatActivity implements DialogInterface.OnClickListener {
-    private FloatingActionButton floatingActionButton;
+    private FloatingActionButton addButton;
     //read1
     private SearchView svSearchTask;
     private ListView lstvAllTasks;
@@ -47,8 +47,8 @@ public class MyBooksActivity extends AppCompatActivity implements DialogInterfac
         //read3 ,set adapter to listview(connect the data to list view)
         lstvAllTasks.setAdapter(taskAdapter);
 
-        floatingActionButton = findViewById(R.id.floatingActionButton);
-        floatingActionButton.setOnClickListener(new View.OnClickListener() {
+        addButton = findViewById(R.id.floatingActionButton);
+        addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) { //كل נbutton الو امر معين بتعمل رد فعل
                 startActivity(new Intent(getApplicationContext(), AddBookActivity.class));
@@ -64,7 +64,7 @@ public class MyBooksActivity extends AppCompatActivity implements DialogInterfac
         protected void onResume(){//بتكمل الداله
         super.onResume();
 
-        readDataFromFireBase("");
+        readDataFromFireBase("");//تزويد الادابتر بالمعلومات
         }
         //read5
 
@@ -75,15 +75,15 @@ public class MyBooksActivity extends AppCompatActivity implements DialogInterfac
      */
 
     private void readDataFromFireBase(String s) {
-        DatabaseReference ref=FirebaseDatabase.getInstance().getReference();
+        DatabaseReference ref=FirebaseDatabase.getInstance().getReference();//تخزين وترتيب المعلومات بالفير بيس بكون عشكل شجره
         String uid=FirebaseAuth.getInstance().getUid();//current user id
 
         // اضافة امكانية "التحتلن"بكل تغيير سيحصل على القيم في قاعدة البيانات
-        ref.child("MyBooks").addValueEventListener(new ValueEventListener() {
+        ref.child("MyBooks").addValueEventListener(new ValueEventListener() {//  (فيربيس) מאזין لاي تغيير بحصل على المعطيات المحدده قبله في قاعدة الييانات
             @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                taskAdapter.clear();
-                for (DataSnapshot d:dataSnapshot.getChildren()
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {//معالج للحدث
+                taskAdapter.clear();//الادابتر بوخد المعلومات من الفير بيس وبعمل ديما تنظيف عشان يفوت معلومات جديده
+                for (DataSnapshot d:dataSnapshot.getChildren()//بارمتر نسخه عن كل البيانات الموجوده بالمكان المحدد
                      ) {
                     MyBook t=d.getValue(MyBook.class);
                     taskAdapter.add(t);
@@ -110,6 +110,10 @@ public class MyBooksActivity extends AppCompatActivity implements DialogInterfac
     //3. select item event handler
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+       // This method makes a reaction according to what you pick from the options that appear on the menu.
+     //   to transfer to the history screen.
+     //   to transfer to the settings screen.
+      //  to sign out.
         if(item.getItemId()==R.id.mnitmSignOut)
         {
             AlertDialog.Builder builder=new AlertDialog.Builder(this);
@@ -147,7 +151,7 @@ public class MyBooksActivity extends AppCompatActivity implements DialogInterfac
         }
         if(which==dialogInterface.BUTTON_NEGATIVE)
         {
-            Toast.makeText(getApplicationContext(), "loging out canceled", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), "loging out canceled", Toast.LENGTH_SHORT).show();//الرساله اللي بنعرض
             dialogInterface.cancel();
         }
     }

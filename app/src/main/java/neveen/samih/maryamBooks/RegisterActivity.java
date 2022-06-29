@@ -37,6 +37,9 @@ public class RegisterActivity extends AppCompatActivity {
         });    }
 
     private void validate() {
+        //This segment checks if the email you entered is long enough to have access,if the email`s length is shorter than what's required an alert will show up to inform the user that the inputs are not valid.
+        //The same goes with the password, the segment checks if the password you  entered is valid according to the requirements.
+        //All the info you enter will be stored in the firebase.
         boolean isOk=true;
         String email = etEmail.getText().toString();
         String pass1 = etPassword.getText().toString();
@@ -75,6 +78,7 @@ public class RegisterActivity extends AppCompatActivity {
         auth.createUserWithEmailAndPassword(email, pass1).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+                //checks if it's already logged in
                 if (task.isSuccessful()==true)
                 {
                     finish();

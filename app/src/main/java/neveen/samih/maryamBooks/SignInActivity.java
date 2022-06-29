@@ -49,6 +49,9 @@ public class SignInActivity extends AppCompatActivity {
 
     }
     private void validate(){
+        //This segment checks if the email you entered is long enough to have access,if the email`s length is shorter than what's required an alert will show up to inform the user that the inputs are not valid.
+        //The same goes with the password, the segment checks if the password you  entered is valid according to the requirements.
+        //All the info you enter will be stored in the firebase.
         boolean isOk=true;
         String email=etEmail.getText().toString();
         String passw=etPassword.getText().toString();
@@ -72,6 +75,8 @@ public class SignInActivity extends AppCompatActivity {
         auth.signInWithEmailAndPassword(email, passw).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
+                //According to the inputs you have entered, this segment checks if these inputs are valid, the user will receive a message that his login is successful.
+                //Otherwise the user will receive a message that his log in failed.
                 if (task.isSuccessful()){
                     Toast.makeText(getApplicationContext(), "signing in successfully", Toast.LENGTH_SHORT).show();
                     finish();

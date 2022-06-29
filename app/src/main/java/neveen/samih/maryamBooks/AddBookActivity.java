@@ -72,7 +72,7 @@ public class AddBookActivity<etDueDate> extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) { //بناء كل الصفات
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add_task);
         ToggleButton button;
@@ -108,6 +108,7 @@ public class AddBookActivity<etDueDate> extends AppCompatActivity {
                 android.R.layout
                         .simple_spinner_dropdown_item);
         spnrLang.setAdapter(adLangs);
+        //ملائم او رابط بين الواجهه والمعلومه عشان ينعرضو بالليست فيو
      //    etDueDate=findViewById(R.id.etDueDate);
    //     btnDatePicker=findViewById(R.id.btnDatePicker);
         btnSave.setOnClickListener(new View.OnClickListener() {
@@ -123,16 +124,16 @@ public class AddBookActivity<etDueDate> extends AppCompatActivity {
                 //check runtime permission
                 Toast.makeText(getApplicationContext(), "image", Toast.LENGTH_SHORT).show();
                 if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-                    if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {
-                        //permission not granted, request it.
-                        String[] permissions = {Manifest.permission.READ_EXTERNAL_STORAGE};
+                    if (checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE) == PackageManager.PERMISSION_DENIED) {//فحص اذا في اذن
+                        //permission not granted, request it.//اذا مش موافق علاذن منطلب اذن
+                        String[] permissions = {Manifest.permission.READ_EXTERNAL_STORAGE};//الاذن الاستعمال مندخله لملف التعريفات
                         //show popup for runtime permission
                         requestPermissions(permissions, PERMISSION_CODE);
                     } else {
-                        //permission already granted
+                        //permission already granted//وافق عالاذن
                         pickImageFromGallery();
                     }
-
+//الجواب برجع للداله onrequestpermissionresult
                 }
             }
         });
@@ -153,7 +154,7 @@ public class AddBookActivity<etDueDate> extends AppCompatActivity {
  //     }
    //    });
     }
-    private void uploadImage(Uri filePath) {
+    private void uploadImage(Uri filePath) {//رفع الصوره للفيربيس
 
         if(filePath != null)
         {
@@ -171,7 +172,11 @@ public class AddBookActivity<etDueDate> extends AppCompatActivity {
                             progressDialog.dismiss();
                             ref.getDownloadUrl().addOnCompleteListener(new OnCompleteListener<Uri>() {
                                 @Override
-                                public void onComplete(@NonNull Task<Uri> task) {
+                                public void onComplete(@NonNull Task<Uri> task) {// After you picked an image from your gallery you have to upload it,
+                                    // if it did upload successfully a message will appear “uploaded”.
+
+
+                                    // فحص اذا كل العمليه اكتملت وتم رفع المعطيات للفير بيس
                                     downladuri = task.getResult();
                                     book.setImage(downladuri.toString());
                                     btnSave.setEnabled(true);
@@ -273,19 +278,19 @@ public class AddBookActivity<etDueDate> extends AppCompatActivity {
     private void pickImageFromGallery(){
         //intent to pick image
         Intent intent=new Intent(Intent.ACTION_PICK);
-        intent.setType("image/*");
+        intent.setType("image/*");//منوين ديوخد الصور
         startActivityForResult(intent,IMAGE_PICK_CODE);
     }
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {//جواب اذا الاذن موافق علي
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
         switch (requestCode) {
             case PERMISSION_CODE: {
                 if (grantResults.length > 0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
-                    //permission was granted
+                    //permission was granted موافق
                     pickImageFromGallery();
                 } else {
-                    //permission was denied
+                    //permission was denied لم يوافق عليه
                     Toast.makeText(this, "Permission denied...!", Toast.LENGTH_SHORT).show();
                 }
             }
@@ -295,6 +300,7 @@ public class AddBookActivity<etDueDate> extends AppCompatActivity {
     //handle result of picked images
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        //بعد ماخترنا الصوره منرجع لنفس الشاشه اللي طلعنا منو وبتعود للدالهonActivityResult
         super.onActivityResult(requestCode,resultCode,data);
         if (resultCode==RESULT_OK && requestCode== IMAGE_PICK_CODE){
             //set image to image view
